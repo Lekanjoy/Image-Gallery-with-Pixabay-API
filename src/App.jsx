@@ -37,10 +37,11 @@ function App() {
 
 
   return (
-    <div className={`App ${theme} w-full h-full py-8 border-0 relative`}>
+    <div className={`App ${theme} w-full h-full py-8 px-10 border-0 relative`}>
+      <div className="w-full flex items-center gap-x-8  md:justify-center">
         <SearchBar searchTerm={(text) => setTerm(text)} />
         <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
-
+      </div>
 
       {/* Check if Search term brings no result */}
       {!isLoading && images.length === 0 && (

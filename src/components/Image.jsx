@@ -5,7 +5,7 @@ function Image({ images, theme }) {
   return (
     <div
       id="image"
-      className={`${theme} bg-white p-4 shadow-md ease-in duration-500 cursor-pointer w-4/5 rounded-md h-auto mb-4 hover:shadow-2xl md:shadow-md md:w-72 md:hover:scale-110`}
+      className={`${theme} bg-white p-4 shadow-lg ease-in duration-500 cursor-pointer w-full rounded-md h-auto mb-4 hover:shadow-2xl md:shadow-md md:w-72 md:hover:scale-110`}
     >
       <img
         src={images.webformatURL}

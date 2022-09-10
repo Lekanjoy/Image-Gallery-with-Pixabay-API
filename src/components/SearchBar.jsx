@@ -17,20 +17,22 @@ function SearchBar({searchTerm}) {
   return (
     <form
       onSubmit={handleSearch}
-      className="mb-8  text-center flex justify-center gap-x-3 relative"
+      className="mb-8   text-center flex justif gap-x-3 relative"
     >
-      <input
-        onChange={handleChange}
-        type="search"
-        placeholder="Search for Photo Genres"
-        className="py-2 px-6 rounded-md text-black border shadow-md outline-none"
-      />
-      <button
-        type="submit"
-        className="btn-primary "
-      >
-        Search
-      </button>
+      <div className="relative">
+          <input
+            onChange={handleChange}
+            type="search"
+            placeholder="Search for Photo "
+            className="py-3 px-6 w-[250px] rounded-md text-black border shadow-md outline-none md:w-96"
+          />
+          <button
+            type="submit"
+            className="btn-primary absolute right-1 top-[5px]"
+          >
+            Search
+          </button>
+      </div>
     </form>
   );
 }
