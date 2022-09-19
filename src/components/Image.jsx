@@ -5,13 +5,23 @@ function Image({ images, theme }) {
   return (
     <div
       id="image"
-      className={`${theme} bg-white p-4 shadow-lg ease-in duration-500 cursor-pointer w-full rounded-md h-auto mb-4 hover:shadow-2xl md:shadow-md md:w-72 md:hover:scale-110`}
+      className={`${theme} bg-white p-4 shadow-lg ease-in duration-500 relative
+        w-full rounded-md h-auto mb-4 hover:shadow-2xl md:shadow-md md:w-[100%] md:hover:scale-110 lg:w-72`}
     >
-      <img
-        src={images.webformatURL}
-        alt={tags[0]}
-        className=" w-full h-auto  rounded-md md:h-auto"
-      />
+      <a href={images.pageURL} target="blank">
+        <img
+          src={images.webformatURL}
+          alt={tags[0]}
+          className=" w-full h-auto cursor-pointer rounded-md md:h-fit"
+        />
+      </a>
+      <a href="https://pixabay.com/" target="blank">
+        <img
+          className="w-10 h-10 rounded-full absolute top-5 right-5"
+          src="https://pixabay.com/static/img/public/medium_rectangle_b.png"
+          alt="Pixabay"
+        />
+      </a>
       <div className="details my-6">
         <h1 className="text-gray-400 font-medium mb-2">
           Photo by
@@ -32,7 +42,8 @@ function Image({ images, theme }) {
           return (
             <p
               key={index}
-              className="bg-slate-100 text-gray-800 py-1 px-2 rounded-sm text-sm font-semibold whitespace-nowrap"
+              className="bg-slate-100 text-gray-800 py-1 px-2 rounded-sm text-sm font-semibold 
+                whitespace-nowrap"
             >
               #{tag}
             </p>
